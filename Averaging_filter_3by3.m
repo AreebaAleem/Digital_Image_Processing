@@ -1,18 +1,13 @@
 img1 = double(rgb2gray(imread('C:\Users\Dell XPS White\Desktop\MATLAB\Digital_Image_Processing\color.jpg')));
 [R, C] = size(img1);
 img2 = zeros(R,C);
-for i=1:1:R
-    for j=1:1:C
-        img2(i,j) = 255 - img1(i,j);
-    end
+for i=2:1:R-1
+for j=2:1:C-1
+temp=img1(i-1:i+1,j-1:j+1);
+temp2=reshape(temp,1,[]);
+mysum=sum(temp2);
+myvalue=mysum/9;
+img2(i,j)=myvalue;
 end
-figure;
+end
 imshow(img2,[]);
-
-r = 0:255;
-s = 255-r;
-figure;
-plot(r,s);
-title('Plot');
-xlabel('Input(s)');
-ylabel('Output(r)');
