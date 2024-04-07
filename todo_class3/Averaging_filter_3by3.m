@@ -1,4 +1,4 @@
-img1 = double(rgb2gray(imread('C:\Users\Dell XPS White\Desktop\MATLAB\Digital_Image_Processing\color.jpg')));
+img1 = double(rgb2gray(imread('C:\Users\Dell XPS White\Desktop\MATLAB\Digital_Image_Processing\todo_class3\color.jpg')));
 [R, C] = size(img1);
 img2 = zeros(R,C);
 for i=2:1:R-1
